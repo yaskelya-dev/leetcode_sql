@@ -50,5 +50,3 @@ sudo -u postgres psql
 8. LIMIT / OFFSET (пагинация)
 
 Из-за этого к примеру в WHERE нельзя использоват псевдонимы из SELECT
-
-
