@@ -1,0 +1,51 @@
+docker run -it --name ubuntu-demo --rm ubuntu:latest
+
+apt update
+
+apt install postgresql postgresql-contrib
+
+service postgresql start
+
+su - postgres
+psql
+
+
+CREATE DATABASE leetcode_db;
+CREATE USER leetcode_user WITH PASSWORD 'leetcodePASS';
+ALTER DATABASE leetcode_db OWNER TO leetcode_user;
+
+
+psql -U leetcode_user -d leetcode_db -h 127.0.0.1
+
+
+CREATE TABLE users(
+       id INTEGER,
+       name TEXT
+);
+
+
+
+sudo -u postgres psql
+
+
+Как пишем запрос:
+1. SELECT
+2. FROM / JOIN ... ON
+3. WHERE
+4. GROUP BY
+5. HAVING
+6. ORDER BY
+7. LIMIT / OFFSET
+
+Как исполняется:
+1. FROM + JOIN (выбор и объединение таблиц)
+2. WHERE (фильтрация отдельных строк)
+3. GROUP BY (группировка)
+4. HAVING (фильтрация агрегированных функций)
+5. SELECT (вычисление колонок, псевдонимы)
+6. DISTINCT (Удаление дубликатов)
+7. ORDER BY (сортировка)
+8. LIMIT / OFFSET (пагинация)
+
+Из-за этого к примеру в WHERE нельзя использоват псевдонимы из WHERE
+

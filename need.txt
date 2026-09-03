@@ -1,0 +1,45 @@
+1.
+SELECT		
+FROM		
+JOIN ON		(LEFT, RIGHT, CROSS, FULL)
+WHERE		
+GROUP BY	
+HAVING		
+ORDER BY	ASC|DESC
+LIMIT 		
+
+2.
+COUNT, MIN, MAX, SUM, AVG, LENGTH, ROUND, DISTINCT
+
+3. 
+
+
+1. LEFT JOIN ... ON ... WHERE
+2. GROUP BY ... HAVING COUNT(*)
+3. IS NULL
+4. subquery ()
+5. INTERVAL '1 day'
+
+7. MIN GROUP BY
+8. WHERE ... OR
+9. WHERE ... OR !=
+10. GROUP BY ... HAVING ... ORDER BY COUNT() LIMIT
+13. NOT IN ()
+14. CASE WHEN THEN END AS
+15. Report Value or NULL
+17. UPDATE ... SET sex = CASE WHEN THEN END
+18. GROUP BY (col_1, col_2) HAVING
+21. subquery() WHERE dat NOT BETWEEN '' AND ''
+22. COUNT(DISTINCT) dat BETWEEN '' - INTERVAL '29 days'
+24. SUM(CASE WHEN ... THEN)
+25. col_1::numeric, COUNT(*) FILTER (WHERE ...)
+27. CROSS JOIN LEFT JOIN
+28. STRING_AGG() - объединить строки
+29. reg - регулярки надо будет писать с ~
+30. LIKE сравнение
+31. UPPER, LOWER, SUBSTRING
+32. LENGTH()
+33. CROSS JOIN LATERAL (
+    VALUES
+)
+
