@@ -25,11 +25,13 @@ CREATE TABLE users(
 
 
 
+sudo -i -u postgres psql
 sudo -u postgres psql
 
 
+
 Как пишем запрос:
-1. SELECT
+1. SELECT 
 2. FROM / JOIN ... ON
 3. WHERE
 4. GROUP BY
@@ -43,9 +45,10 @@ sudo -u postgres psql
 3. GROUP BY (группировка)
 4. HAVING (фильтрация агрегированных функций)
 5. SELECT (вычисление колонок, псевдонимы)
-6. DISTINCT (Удаление дубликатов)
+6. DISTINCT (удаление дубликатов)
 7. ORDER BY (сортировка)
 8. LIMIT / OFFSET (пагинация)
 
-Из-за этого к примеру в WHERE нельзя использоват псевдонимы из WHERE
+Из-за этого к примеру в WHERE нельзя использоват псевдонимы из SELECT
+
 
