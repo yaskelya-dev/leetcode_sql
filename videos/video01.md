@@ -156,6 +156,21 @@ WHERE sport = 'poker';
 ```
 
 
-## 10'. Полезные материалы:
+## 10'. Создание БД и таблицы
+#### Создание БД:
+```SQL
+CREATE DATABASE my_database;
+```
+#### Создание таблицы:
+```SQL
+CREATE TABLE table_name (
+    column1 datatype constraints,
+    column2 datatype constraints,
+    ...
+);
+```
+
+
+## 11'. Полезные материалы:
 [Видеокурс Андрея Созыкина](https://www.youtube.com/watch?v=uGKIXTUjZbc&list=PLtPJ9lKvJ4oh5SdmGVusIVDPcELrJ2bsT&pp=mAkA)
 
