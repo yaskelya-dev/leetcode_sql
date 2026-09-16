@@ -4,7 +4,7 @@
 
 Объясню в рамках интереактивного контейнера с Ubuntu:
 ```commandline
-docker run -it --name leetcode_pg -p 5432:5432 ubuntu:latest bash
+docker run -it -p 5432:5432 ubuntu:latest bash
 ```
 
 Устанавливаем и запускаем PostgreSQL:
