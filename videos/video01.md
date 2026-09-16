@@ -61,6 +61,7 @@ psql -h 127.0.0.1 -U leetcode_user -d leetcode_db
 |                        | `LIMIT / OFFSET` (пагинация)                 |
 
 Именно из-за такого порядка исполнения в блоке `WHERE` нельзя использовать псевдонимы из `SELECT` или агрегатные функции вроде `COUNT(*)`
+### Практика: employees
 
 
 ## 2. Базовый каркас и фильтрация (WHERE)
@@ -71,6 +72,8 @@ psql -h 127.0.0.1 -U leetcode_user -d leetcode_db
 4. Поиск по строкам:
    - `LIKE 'A%'` - простой поиск по шаблону (`%` - любое количество символов, `_` - один символ)
    - `~ '^[A-Z]'` - регулярные выражения для сложных паттернов (например, валидностьь email)
+
+### Практика: employees
 
 
 ## 3. Объединение таблиц (JOIN)
@@ -105,12 +108,17 @@ FROM sizes AS s
 CROSS JOIN colors AS c;
 ```
 
+### Практика: employees, departments, sizes, colors
+
+
 
 ## 4. Группировка и агрегация
 Конструкции: `GROUP BY`, `HAVING`, `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`, `COUNT(DISTINCT)`
 1. `GROUP BY job` - схлопывает строки с одинаковым значением `job` в одну группу 
 2. `HAVING COUNT(*) > 1` - фильтрует уже сгруппированные данные (в отличие от `WHERE`, который фильтрует строки до группировки) 
 3. `COUNT(DISTINCT user_id)` - считает только уникальных пользователей в группе
+
+### Практика: employees
 
 
 ## 5. Трансформация данных и условные конструкции
@@ -136,12 +144,17 @@ GROUP BY id;
 3. Округение - `ROUND(val, 2)`
 4. Приведение типов - если делить целые числа, то результат будет целым числом: `5 / 2 = 2`
 
+### Практика: players, department_revenue, employees
+
+
 
 ## 6. Работа со строками и сцепка
 Конструкции: `UPPER`, `LOWER`, `SUBSTRING`, `STRING_AGG`
 1. `UPPER(name)`, `LOWER(name)` - изменение регистра
 2. `SUBSTRING(name FROM 1 FOR 1)` - извлечение части строки
 3. `STRING_AGG(DISTINCT product, ',' ORDER BY product)` - собирает значения из нескольких строк одной группы в одну текстовую строку через запятую. Крайне полезно для задач формирования отчётов
+
+### Практика: employees, products
 
 
 ## 7. Подзапросы и хитрые паттерны LeetCode
@@ -175,11 +188,15 @@ CROSS JOIN LATERAL (
 WHERE u.price IS NOT NULL;
 ```
 
+### Практика: person, employees, products
+
 
 ## 8. Сортировка и пагинация
 Конструкции: `ORDER BY`, `LIMIT`, `OFFSET`
 1. `ORDER BY salary DESC, name ASC` - сортируем строки по убыванию цены, а если цена одинаковая, то по алфавиту имён
 2. `LIMIT 5 OFFSET 10` - пропустить первые 10 строк и взять следующие 5
+
+### Практика: employees
 
 
 ## 9. Вставка, обновление и удаление данных
@@ -200,6 +217,8 @@ UPDATE players
 SET caste = 'gambler', status = 'no risk no rich'
 WHERE sport = 'poker';
 ```
+
+### Практика: sizes, employees, players
 
 
 ## 10'. Создание БД и таблицы
