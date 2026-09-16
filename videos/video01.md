@@ -1,5 +1,51 @@
 # Video 01
 
+## 0. Подготовка окружения
+
+Объясню в рамках интереактивного контейнера с Ubuntu:
+```commandline
+docker run -it --name leetcode_pg -p 5432:5432 ubuntu:latest bash
+```
+
+Устанавливаем и запускаем PostgreSQL:
+```commandline
+# Обновляем индексы и устанавливаем Postgres
+apt update && apt install postgresql postgresql-contrib
+
+# Запускаем службу PostgreSQL
+service postgresql start
+```
+
+Переключаемся на системного пользователя postgres и входим в консоль psql:
+```commandline
+# Переходим под пользователя postgres
+su - postgres
+
+# Запускаем CLI клиент psql
+psql
+```
+
+Создание пользователя и БД:
+```SQL
+-- Создаем пользователя с паролем
+CREATE USER leetcode_user WITH PASSWORD 'leetcode_pass';
+
+-- Создаем базу данных для тестов
+CREATE DATABASE leetcode_db OWNER leetcode_user;
+
+-- Даем пользователю все права на БД
+GRANT ALL PRIVILEGES ON DATABASE leetcode_db TO leetcode_user;
+
+-- Выходим из psql
+\q
+```
+
+Подключаемся к БД под новым пользователем:
+```commandline
+psql -h 127.0.0.1 -U leetcode_user -d leetcode_db
+```
+
+
 ## 1. Структура SQL-запроса
 Пишется запрос в одном порядке, но исполняется в другом
 
