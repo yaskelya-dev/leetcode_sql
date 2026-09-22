@@ -11,9 +11,9 @@ Python backend разработчик
 ## Социальные сети и связь
 
 Следите за обновлениями, разборами новых задач и полезными материалами по программированию в моих социальных сетях:
-* **Telegram:** [@yaskelya_dev](https://t.me) - анонсы и общение
-* **YouTube:** [@yaskelya_dev](https://youtube.com) - длинные видео с решением задач
-* **TikTok:** [@yaskelya_dev](https://tiktok.com) - фрагменты видео
+* **Telegram:** [@yaskelya_dev](https://t.me/yaskelya_dev) - анонсы и общение
+* **YouTube:** [@yaskelya_dev](https://www.youtube.com/@yaskelya_dev) - длинные видео с решением задач
+* **TikTok:** [@yaskelya_dev](https://vk.ru/away.php?to=https%3A%2F%2Fwww.tiktok.com%2F%40yaskelya_dev%3F_r%3D1%26_t%3DZS-99wWamsZnOu&utf=1) - фрагменты видео
 
 ## О курсе
 В данном репозитории вы найдете:
