@@ -126,7 +126,7 @@ CROSS JOIN colors AS c;
 1. `CASE WHEN` - аналог if/else в SQL:
 ```SQL
    UPDATE salary 
-   SET sex = CASE 
+   SET sport = CASE 
       WHEN sport = 'basket' THEN 'volley' 
       WHEN sport = 'volley' THEN 'basket' 
    END;
