@@ -64,7 +64,7 @@ psql -h 127.0.0.1 -U leetcode_user -d leetcode_db
 ### Практика: employees
 
 
-## 2. Базовый каркас и фильтрация (WHERE)
+## 2. Фильтрация строк (WHERE)
 Конструкции: `WHERE`, `AND`, `OR`, `IS NULL`, `IS NOT NULL`, `BETWEEN`, `LIKE`, `~` (регулярки), `INTERVAL`
 1. Простая фильтрация - `WHERE id > 50 AND name IS NOT NULL`
 2. Диапазоны дат - `date BETWEEN '2019-05-02' AND '2019-06-01'`
