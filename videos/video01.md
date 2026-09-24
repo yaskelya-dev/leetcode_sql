@@ -125,6 +125,15 @@ CROSS JOIN colors AS c;
 Конструкции: `CASE WHEN`, `условная агрегация (PIVOT)`, `ROUND()`, `::numeric`
 1. `CASE WHEN` - аналог if/else в SQL:
 ```SQL
+SELECT
+    *,
+    CASE
+        WHEN x + y <= z OR x + z <= y OR y + z <= x THEN 'No'
+        ELSE 'Yes'
+    END AS triangle
+FROM triangle
+```
+```SQL
    UPDATE salary 
    SET sport = CASE 
       WHEN sport = 'basket' THEN 'volley' 
